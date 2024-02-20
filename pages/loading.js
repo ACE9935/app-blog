@@ -11,7 +11,7 @@ export default function Loading({query}) {
      <meta name="description" content="I post all type of content on this blog." />
      </Head>
       <div className='p-4 flex flex-col w-full max-w-[1400px]'>
-           <div className='flex gap-5 flex-col pb-12 sm:pt-8'>
+           <div className='flex gap-4 flex-col pb-12 sm:pt-8'>
             <p className='text-white font-primary font-[300] text-2xl sm:text-3xl'>Waiting for matches...</p>
       <div className="grid gap-6 pb-16 w-full md:grid-cols-2 lg:grid-cols-3">
     {Array.from({ length: 3 }, (_, index) => index + 1).map((i)=><div key={i} class={styles.card}>
