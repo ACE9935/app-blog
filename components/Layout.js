@@ -24,7 +24,7 @@ function Layout({children}) {
 
     return ( 
         <>
-        <nav className='relative bg-primary py-2 flex justify-center flex-col'>
+        <nav className='relative bg-primary py-2 flex justify-center flex-col items-center'>
         <div className='relative w-full px-4' style={{maxWidth:"1400px"}}>
             <div className='flex items-center justify-end !min-h-[0] gap-4'>
                {(matches||(!opens&&!inputValue.length))&&<Link href="/"><AppLogo className="cursor-pointer w-[200px] m-1  xl:w-[250px] absolute left-0 top-[-4px]"/></Link>}
