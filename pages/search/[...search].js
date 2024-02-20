@@ -34,12 +34,12 @@ import Link from 'next/link';
 function GenresPage({matches,currentPage,totalPage,query,totalResults}) {
 
     return ( 
-        <section id="SD1" className='w-full relative bg-primary py-12 min-h-screen p-2'>
+        <section id="SD1" className='w-full relative bg-primary py-12 min-h-screen p-2 flex justify-center'>
          <Head>
         <title>{"Seach results for: "+query}</title>
         <meta name="description" content="I post all type of content on this blog." />
         </Head>
-           <div className='p-4 flex flex-col w-full'>
+           <div className='p-4 flex flex-col w-full max-w-[1400px]'>
             <div className='flex justify-between flex-wrap'>
             <div className='flex gap-5 flex-col pb-12 sm:pt-8'>
             <p className='text-white font-primary font-[300] text-2xl sm:text-3xl'>{"Seach results for: "+query}</p>

@@ -60,7 +60,7 @@ export const getStaticProps = async ({params}) => {
 
 function Articles({data,article}) {
     return ( 
-        <section className='w-full relative bg-primary py-12 '>
+        <section className='w-full relative bg-primary py-12 flex justify-center'>
          <Head>
         <title>{article.title}</title>
         <meta name="description" content="I post all type of content on this blog." />

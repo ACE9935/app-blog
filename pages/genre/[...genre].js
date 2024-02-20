@@ -68,12 +68,12 @@ const genresCards = parseInt(process.env.NUM_GENRES_CARDS);
 function GenresPage({data,numPages,genre}) {
 
     return ( 
-        <section id="SD1" className='w-full relative bg-primary py-12 min-h-screen p-2'>
+        <section id="SD1" className='w-full relative bg-primary py-12 min-h-screen p-2 flex justify-center'>
          <Head>
         <title>{data[0]?data[0].genre+" Articles":""}</title>
         <meta name="description" content="I post all type of content on this blog." />
         </Head>
-           <div className='p-4 flex flex-col w-full'>
+           <div className='p-4 flex flex-col w-full max-w-[1400px]'>
             <div className='flex gap-5 flex-col pb-12 sm:pt-8'>
             <motion.h1 style={{textShadow:"7px 7px 0px black"}} initial={{opacity:0,y:-20}} animate={{opacity:1,y:0}} transition={{duration:1}} className="text-3xl justify-start sm:text-5xl font-primary text-lightP">{genre.genre+" :"}</motion.h1>
             <p className='text-white font-primary font-[300] text-xl sm:text-3xl'>{genre.theme}</p>

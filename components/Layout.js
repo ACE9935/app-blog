@@ -19,10 +19,10 @@ function Layout({children}) {
     const matches = useMediaQuery(theme.breakpoints.up('sm'));
     return ( 
         <>
-        <nav className='relative bg-primary py-2 px-4'>
-        <div style={{maxWidth:"1400px"}}>
+        <nav className='relative bg-primary py-2 px-4 flex justify-center'>
+        <div className='relative w-full' style={{maxWidth:"1400px"}}>
             <div className='flex items-center justify-end !min-h-[0] gap-4'>
-               {(matches||(!opens&&!inputValue.length))&&<Link href="/"><AppLogo className="cursor-pointer w-[200px] m-1  xl:w-[250px] absolute left-0 top-1"/></Link>}
+               {(matches||(!opens&&!inputValue.length))&&<Link href="/"><AppLogo className="cursor-pointer w-[200px] m-1  xl:w-[250px] absolute left-0 top-[-4px]"/></Link>}
                <SearchBar inputValue={inputValue} setInputValue={setInputValue} opens={opens} onClick={()=>!matches&&setOpens(o=>!o)} matches={matches}/>
                  <Stack component='ul'
                  id="navbar"
