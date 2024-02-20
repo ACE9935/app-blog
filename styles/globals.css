@@ -63,3 +63,7 @@ a {
   font-size: 30px !important;
   border: 2px solid black !important;
 }
+.MuiPaginationItem-ellipsis{
+  color: rgb(255, 255, 255) !important;
+  font-size: 30px !important;
+}

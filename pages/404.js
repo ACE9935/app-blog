@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import Stext from '../components/Articles/SText';
+import Head from 'next/head';
 
 const NotFoundPage = () => {
   return (
