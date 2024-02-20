@@ -2,7 +2,6 @@ import { useEffect } from 'react';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/dist/ScrollTrigger';
 import TextPlugin from 'gsap/dist/TextPlugin';
-import Image from "next/image"
 
 function SecondSection() {
 

@@ -1,7 +1,6 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
 import ATitle from '../../components/Articles/ATitle';
-import LinkButton from '../LinkButton';
 
 function ArticleCard({data:o}) {
     return ( 

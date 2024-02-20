@@ -1,4 +1,4 @@
-import { Container} from "@mui/material";
+
 import fetchBlogArticles from "../api/fetchArticles";
 import getRecommended from "../api/getRecommended";
 import Head from 'next/head'
@@ -65,10 +65,10 @@ function Articles({data,article}) {
         <title>{article.title}</title>
         <meta name="description" content="I post all type of content on this blog." />
       </Head>
-           <Container className="z-[5] relative px-3 sm:px-6 sm:pt-14 pb-8 text-[1.35rem] leading-[1.625] flex flex-col gap-[2rem] max-w-[1400px]">
+           <div className="z-[5] relative px-3 sm:px-6 sm:pt-14 pb-8 text-[1.35rem] leading-[1.625] flex flex-col gap-[2rem] max-w-[1400px]">
             <TitleSection date={article.date} title={article.title} sub={article.genre}/>
              <Article article={article} data={data}/>
-           </Container>
+           </div>
            <div className='absolute top-0 w-full h-[700px] sm:h-[1300px] bg-cover bg-[url("/stars1.png")] bg-center top-[1px]'></div>
         </section>
      );
