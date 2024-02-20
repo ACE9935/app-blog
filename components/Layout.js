@@ -18,7 +18,7 @@ function Layout({children}) {
     const matches = useMediaQuery(theme.breakpoints.up('sm'));
     return ( 
         <>
-        <nav className='relative bg-primary lg:py-0 py-2'>
+        <nav className='relative bg-primary py-2'>
         <div style={{maxWidth:"1400px"}}>
             <div className='flex items-center justify-end !min-h-[0] gap-4'>
                {(matches||!opens)&&<Link href="/"><AppLogo className="cursor-pointer w-[200px]  xl:w-[250px] absolute left-0 top-1"/></Link>}

@@ -65,7 +65,7 @@ function Articles({data,article}) {
         <title>{article.title}</title>
         <meta name="description" content="I post all type of content on this blog." />
       </Head>
-           <div className="z-[5] relative px-3 sm:px-6 sm:pt-14 pb-8 text-[1.35rem] leading-[1.625] flex flex-col gap-[2rem] max-w-[1400px]">
+           <div className="z-[5] relative px-3 sm:px-6 pb-8 text-[1.35rem] leading-[1.625] flex flex-col gap-[2rem] max-w-[1400px]">
             <TitleSection date={article.date} title={article.title} sub={article.genre}/>
              <Article article={article} data={data}/>
            </div>

@@ -1,9 +1,9 @@
 import { Divider } from "@mui/material";
-import {StyledDivider} from "./StyledDivider"
 import IntStar from "./IntStar";
 import Link from 'next/link';
 import { styled } from '@mui/material';
 import React from "react";
+import Stext from "./SText";
 
 const StyledStack = styled('div')`
    & img{
@@ -25,7 +25,7 @@ function Recommended({data}) {
     return ( 
         <div className="hidden border-black border-4 lg:block w-fit shrink-0 px-6 pt-6 bg-lightP h-fit">
         <div className="flex items-center flex-col">
-        <StyledDivider x={3} y={3} color={"black"} className="absolute translate-y-[-2.2em] text-[1.4rem] font-primary font-[300] text-white" tag="span">Recommended articles</StyledDivider>
+        <Stext x={3} y={3} color={"black"} className="absolute translate-y-[-2.2em] text-[1.4rem] font-primary font-[300] text-white" tag="span">Recommended articles</Stext>
          {data.map((o,i)=><React.Fragment key={i+3}>
           <Divider
           sx={{
