@@ -69,7 +69,7 @@ function Layout({children}) {
              </AnimatePresence>
        </nav>
        <main>{children}</main>
-       <footer></footer>
+       <footer className='bg-black p-4 text-slate-300 text-md'>© 2024 All Rights Reserved</footer>
       </>
      );
 }
