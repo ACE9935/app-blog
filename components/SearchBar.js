@@ -1,11 +1,11 @@
 import { styled } from '@mui/material';
-import { InputBase} from '@mui/material';
 import SearchIcon from '@mui/icons-material/Search';
 import React from 'react';
 import { ClickAwayListener } from '@mui/base/ClickAwayListener';
 import { useRouter } from 'next/router';
 import ClearIcon from '@mui/icons-material/Clear';
 import { AnimatePresence,motion } from 'framer-motion';
+import SearchInput from './SearchInput';
 
 const Search = styled('div')(({ theme }) => ({
     position: 'relative',
@@ -57,16 +57,7 @@ function SearchBar({onClick,matches,opens,inputValue,setInputValue}) {
         initial={{width:0}}
         animate={{width:"16rem"}}
         exit={{width:0}}
-        ><InputBase
-        
-        sx={{padding:'0.3rem 4rem 0.3rem 0.8rem',fontFamily:"inherit"}}
-          className='!text-md !text-white !w-full'
-          placeholder="Search…"
-          onChange={handleChange}
-          onKeyDown={handleKeyDown}
-          value={inputValue}
-          inputProps={{ 'aria-label': 'search' }}
-        />
+        ><SearchInput matches={matches} handleChange={handleChange} inputValue={inputValue} handleKeyDown={handleKeyDown}/>
          </motion.div>
          </ClickAwayListener>
         }

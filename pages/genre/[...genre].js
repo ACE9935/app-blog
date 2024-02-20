@@ -8,6 +8,7 @@ import getGenresArticles from "../api/getGenresArticles";
 import Link from 'next/link';
 import ArticleCard from '../../components/Genres/ArticleCard';
 import { Stack,Pagination, PaginationItem } from '@mui/material';
+import { useRouter } from 'next/router';
 
 const genresCards = parseInt(process.env.NUM_GENRES_CARDS);
 
@@ -66,7 +67,7 @@ const genresCards = parseInt(process.env.NUM_GENRES_CARDS);
  
 
 function GenresPage({data,numPages,genre}) {
-
+  
     return ( 
         <section id="SD1" className='w-full relative bg-primary py-12 min-h-screen p-2 flex justify-center'>
          <Head>

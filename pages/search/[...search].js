@@ -5,7 +5,9 @@ import ArticleCard from '../../components/Genres/ArticleCard';
 import search from '../api/search';
 import { Stack,Pagination, PaginationItem } from '@mui/material';
 import Link from 'next/link';
-
+import { useRouter } from 'next/router';
+import { useState, useEffect } from 'react';
+import Loading from '../loading';
 
  export const getServerSideProps = async ({query}) => {
     
@@ -31,7 +33,7 @@ import Link from 'next/link';
 };
  
 
-function GenresPage({matches,currentPage,totalPage,query,totalResults}) {
+function SearchPages({matches,currentPage,totalPage,query,totalResults}) {
 
     return ( 
         <section id="SD1" className='w-full relative bg-primary py-12 min-h-screen p-2 flex justify-center'>
@@ -39,7 +41,8 @@ function GenresPage({matches,currentPage,totalPage,query,totalResults}) {
         <title>{"Seach results for: "+query}</title>
         <meta name="description" content="I post all type of content on this blog." />
         </Head>
-           <div className='p-4 flex flex-col w-full max-w-[1400px]'>
+         
+             <div className='p-4 flex flex-col w-full max-w-[1400px]'>
             <div className='flex justify-between flex-wrap'>
             <div className='flex gap-5 flex-col pb-12 sm:pt-8'>
             <p className='text-white font-primary font-[300] text-2xl sm:text-3xl'>{"Seach results for: "+query}</p>
@@ -64,9 +67,9 @@ function GenresPage({matches,currentPage,totalPage,query,totalResults}) {
       count={totalPage} />
     </div>
            </div>
-           
+
         </section>
      );
 }
 
-export default GenresPage;
+export default SearchPages;
