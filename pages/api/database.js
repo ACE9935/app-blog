@@ -1,6 +1,6 @@
 
 const mongoose = require('mongoose');
-const pwd = parseInt(process.env.PWD);
+const pwd = process.env.PWD;
  
   // Replace '<your_connection_string>' with your MongoDB Atlas connection string
   const uri = "mongodb+srv://admin:"+pwd+"@cluster0.i5dwy.mongodb.net/myDB?retryWrites=true&w=majority";
