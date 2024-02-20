@@ -1,6 +1,6 @@
-import { Toolbar,Stack,IconButton,InputBase} from '@mui/material';
+import {Stack,IconButton} from '@mui/material';
+import { ClickAwayListener } from '@mui/base/ClickAwayListener';
 import MenuIcon from '@mui/icons-material/Menu';
-import { Container } from '@mui/system';
 import AppLogo from './AppLogo';
 import MenuItemStar from './MenuItemStar';
 import {genres} from "../src/genresObj"
@@ -17,6 +17,11 @@ function Layout({children}) {
     const [inputValue, setInputValue] = useState('');
     const theme = useTheme();
     const matches = useMediaQuery(theme.breakpoints.up('sm'));
+
+    const handleClickAway = () => {
+      setOpen(false)
+    };
+
     return ( 
         <>
         <nav className='relative bg-primary py-2 flex justify-center flex-col'>
@@ -45,7 +50,7 @@ function Layout({children}) {
             </div>
         </div>
         <AnimatePresence>
-        {open && <motion.div
+        {open && <ClickAwayListener onClickAway={handleClickAway}><motion.div
         initial={{height:0}}
         animate={{height:"auto"}}
         exit={{height:0}}
@@ -59,9 +64,9 @@ function Layout({children}) {
                <motion.div className='w-full h-[1px] bg-white'></motion.div>
                </>
                )}
-        </motion.div>
+        </motion.div></ClickAwayListener> 
          }
-              </AnimatePresence>
+             </AnimatePresence>
        </nav>
        <main>{children}</main>
        <footer></footer>
