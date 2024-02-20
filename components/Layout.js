@@ -14,15 +14,16 @@ import { useTheme } from '@mui/material/styles';
 function Layout({children}) {
     const [open,setOpen]=useState(false)
     const [opens,setOpens]=useState(false)
+    const [inputValue, setInputValue] = useState('');
     const theme = useTheme();
     const matches = useMediaQuery(theme.breakpoints.up('sm'));
     return ( 
         <>
-        <nav className='relative bg-primary py-2'>
+        <nav className='relative bg-primary py-2 px-4'>
         <div style={{maxWidth:"1400px"}}>
             <div className='flex items-center justify-end !min-h-[0] gap-4'>
-               {(matches||!opens)&&<Link href="/"><AppLogo className="cursor-pointer w-[200px]  xl:w-[250px] absolute left-0 top-1"/></Link>}
-               <SearchBar opens={opens} onClick={()=>!matches&&setOpens(o=>!o)} matches={matches}/>
+               {(matches||(!opens&&!inputValue.length))&&<Link href="/"><AppLogo className="cursor-pointer w-[200px] m-1  xl:w-[250px] absolute left-0 top-1"/></Link>}
+               <SearchBar inputValue={inputValue} setInputValue={setInputValue} opens={opens} onClick={()=>!matches&&setOpens(o=>!o)} matches={matches}/>
                  <Stack component='ul'
                  id="navbar"
                  sx={{

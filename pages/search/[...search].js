@@ -40,9 +40,12 @@ function GenresPage({matches,currentPage,totalPage,query,totalResults}) {
         <meta name="description" content="I post all type of content on this blog." />
         </Head>
            <div className='p-4 flex flex-col w-full'>
+            <div className='flex justify-between flex-wrap'>
             <div className='flex gap-5 flex-col pb-12 sm:pt-8'>
-            <p className='text-white font-primary font-[300] text-xl sm:text-3xl'>{"Seach results for: "+query}</p>
-            <p className='text-slate-300 text-md sm:text-3xl'>{`${totalResults==0?"No ":totalResults}${totalResults==1?" match ":" matches "}found:`}</p>
+            <p className='text-white font-primary font-[300] text-2xl sm:text-3xl'>{"Seach results for: "+query}</p>
+            <p className='text-slate-300 text-2xl sm:text-3xl'>{`${totalResults==0?"No ":totalResults}${totalResults==1?" match ":" matches "}found:`}</p>
+            </div>
+            {totalResults==0&&<div className='bg-[url("/404img.png")] bg-right bg-no-repeat w-[90%] bg-contain md:w-[430px] aspect-[1]'></div> }
             </div>
             <div className='g-con grid gap-8 pb-16 w-full md:grid-cols-2 lg:grid-cols-3'>
               {matches.map((o,i)=>

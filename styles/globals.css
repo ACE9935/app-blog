@@ -36,7 +36,7 @@ a {
   0% {transform: translateX(0);}
   100% {transform: translateX(-4135px);}
 }
-#SD,#SD1 {
+#SD,#SD1,#notfound {
   background: 
     url('/wp.png') center / 200px repeat, /* Adjust the path and sizing for the first image */
     url('/stars1.png') center / cover no-repeat,
@@ -46,8 +46,8 @@ a {
   background: black;
   color:white;
   opacity: 0.5;
-  width: 60px;
-  height: 60px;
+  width: 60px !important;
+  height: 60px !important;
   font:inherit;
   font-size: 1rem;
   clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
@@ -60,6 +60,6 @@ a {
 }
 .MuiPaginationItem-icon{
   background-color: white;
-  font-size: 30px;
+  font-size: 30px !important;
   border: 2px solid black;
 }

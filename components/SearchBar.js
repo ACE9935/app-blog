@@ -29,9 +29,8 @@ const Search = styled('div')(({ theme }) => ({
   }));
 
 
-function SearchBar({onClick,matches,opens}) {
+function SearchBar({onClick,matches,opens,inputValue,setInputValue}) {
     const router = useRouter();
-    const [inputValue, setInputValue] = useState('');
 
     const handleKeyDown = (event) => {
         if (event.key === 'Enter') {
@@ -50,7 +49,7 @@ function SearchBar({onClick,matches,opens}) {
           {inputValue.length?<ClearIcon className='!hover:text-green-600 !mr-1' onClick={()=>setInputValue("")}/>:(opens&&!matches)?<ClearIcon className='!hover:text-green-600 !mr-1' onClick={onClick}/>:<></>}
           <SearchIcon className='!hover:text-green-600' onClick={()=>opens?inputValue.length&&router.push(`/search/${inputValue.replace(/ /g, '+')}/1`):matches?inputValue.length&&router.push(`/search/${inputValue.replace(/ /g, '+')}/1`):onClick()}/>
         </SearchIconWrapper>
-        <AnimatePresence>{(matches||opens)&&<motion.div
+        <AnimatePresence>{(matches||opens||inputValue.length)&&<motion.div
         className='w-[16rem]'
         initial={{width:0}}
         animate={{width:"16rem"}}
