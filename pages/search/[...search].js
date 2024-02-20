@@ -49,7 +49,7 @@ function GenresPage({matches,currentPage,totalPage,query,totalResults}) {
               <ArticleCard data={o} key={i}/>
               )}
             </div>
-            <Stack className='flex justify-center w-full items-center gap-[30px]'>
+            <div className='flex justify-center w-full items-center gap-[30px]'>
       <Pagination
       renderItem={(item) => (
         <Link href={`/search/${query}/${item.page}`}>
@@ -59,7 +59,7 @@ function GenresPage({matches,currentPage,totalPage,query,totalResults}) {
         </Link>
       )}
       count={totalPage} />
-    </Stack>
+    </div>
            </div>
            
         </section>

@@ -18,16 +18,18 @@ function Layout({children}) {
     const matches = useMediaQuery(theme.breakpoints.up('sm'));
     return ( 
         <>
-        <nav className='relative bg-primary'>
-        <Container sx={{maxWidth:"1400px"}}>
-            <Toolbar sx={{justifyContent:'end',alignItems:'center',minHeight:'0px !important'}} className='p-3 xl:p-0'>
-               {(matches||!opens)&&<Link href="/"><AppLogo className="cursor-pointer absolute inset-0 translate-y-[12px] w-[200px]  xl:w-[300px]"/></Link>}
-             <SearchBar opens={opens} onClick={()=>!matches&&setOpens(o=>!o)} matches={matches}/>
+        <nav className='relative bg-primary lg:py-0 py-2'>
+        <div style={{maxWidth:"1400px"}}>
+            <div className='flex items-center justify-end !min-h-[0] gap-4'>
+               {(matches||!opens)&&<Link href="/"><AppLogo className="cursor-pointer w-[200px]  xl:w-[250px] absolute left-0 top-1"/></Link>}
+               <SearchBar opens={opens} onClick={()=>!matches&&setOpens(o=>!o)} matches={matches}/>
                  <Stack component='ul'
                  id="navbar"
                  sx={{
-                   display:{xs:'none',lg:'flex'}
+                   display:{xs:'none',lg:'flex'},
+                   alignItems:"center"
                  }} direction='row' spacing={0}>
+                    
                     {genres.map(i=>
                         <Link key={i+1} href={'/genre/'+i.replace(/ /g, '-')+"/1"}>
                         <MenuItemStar color="white" key={i} className='relative text-xl px-6 py-4 cursor-pointer text-lightP font-secondary h-fit grid place-items-center'>{i.replace(/and/g, '&')}</MenuItemStar>
@@ -39,14 +41,14 @@ function Layout({children}) {
                  sx={{color:'white',alignSelf:'center',display:{
                  lg:'none'
                  }}}><MenuIcon sx={{fontSize:'1.9rem !important'}}></MenuIcon></IconButton>
-            </Toolbar>
-        </Container>
+            </div>
+        </div>
         <AnimatePresence>
         {open && <motion.div
         initial={{height:0}}
         animate={{height:"auto"}}
         exit={{height:0}}
-        className='items-center overflow-hidden lg:hidden flex flex-col w-full bg-lightP border-t-2 border-white'
+        className='items-center mt-2 overflow-hidden lg:hidden flex flex-col w-full bg-lightP border-t-2 border-white'
         >
            {genres.map(i=>
            <>

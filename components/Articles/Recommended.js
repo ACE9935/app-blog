@@ -33,7 +33,7 @@ function Recommended({data}) {
            borderColor:"white"
         }}
         key={i}
-        className="w-[100%]"/>
+        className="!w-[100%]"/>
         <Link href={`/posts/${o.title.replace(/ /g, '-')}`}><StyledStack key={i} className="cursor-pointer flex items-center justify-center gap-[0.6rem] py-6 w-[20rem] hover:bg-green-700 transition hover:!text-white">
            <IntStar number={i+1} className="!shrink-0 !text-[0.8rem] !w-[44px]"/>
            <p className="text-[1.2rem] pr-3">{o.title}</p>

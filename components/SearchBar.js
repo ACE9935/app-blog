@@ -46,9 +46,9 @@ function SearchBar({onClick,matches,opens}) {
     return ( 
         <Search>
         <SearchIconWrapper 
-        className='cursor-pointer text-white px-2' >
-          {inputValue.length?<ClearIcon className='hover:text-green-600 mr-1' onClick={()=>setInputValue("")}/>:(opens&&!matches)?<ClearIcon className='hover:text-green-600 mr-1' onClick={onClick}/>:<></>}
-          <SearchIcon className='hover:text-green-600' onClick={()=>opens?inputValue.length&&router.push(`/search/${inputValue.replace(/ /g, '+')}/1`):matches?inputValue.length&&router.push(`/search/${inputValue.replace(/ /g, '+')}/1`):onClick()}/>
+        className='!cursor-pointer !text-white !px-2' >
+          {inputValue.length?<ClearIcon className='!hover:text-green-600 !mr-1' onClick={()=>setInputValue("")}/>:(opens&&!matches)?<ClearIcon className='!hover:text-green-600 !mr-1' onClick={onClick}/>:<></>}
+          <SearchIcon className='!hover:text-green-600' onClick={()=>opens?inputValue.length&&router.push(`/search/${inputValue.replace(/ /g, '+')}/1`):matches?inputValue.length&&router.push(`/search/${inputValue.replace(/ /g, '+')}/1`):onClick()}/>
         </SearchIconWrapper>
         <AnimatePresence>{(matches||opens)&&<motion.div
         className='w-[16rem]'
@@ -57,8 +57,8 @@ function SearchBar({onClick,matches,opens}) {
         exit={{width:0}}
         ><InputBase
         
-        sx={{padding:'0.2rem 4rem 0.2rem 0.7rem',fontFamily:"inherit"}}
-          className='text-md text-white w-full'
+        sx={{padding:'0.3rem 4rem 0.3rem 0.8rem',fontFamily:"inherit"}}
+          className='!text-md !text-white !w-full'
           placeholder="Search…"
           onChange={handleChange}
           onKeyDown={handleKeyDown}
