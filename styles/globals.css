@@ -43,23 +43,23 @@ a {
     url('/green.png') center / 100px repeat; /* Adjust the path and sizing for the second image */
 }
 .MuiPaginationItem-page{
-  background: black;
-  color:white;
-  opacity: 0.5;
+  background: black !important;
+  color:white !important;
+  opacity: 0.5 !important;
   width: 60px !important;
   height: 60px !important;
-  font:inherit;
-  font-size: 1rem;
+  font:inherit !important;
+  font-size: 1rem !important;
   clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
 }
 .Mui-selected{
   background: rgb(255, 255, 255) !important;
-  transform: scale(1.1);
-  opacity: 1;
-  color: black;
+  transform: scale(1.1) !important;
+  opacity: 1 !important;
+  color: black !important;
 }
 .MuiPaginationItem-icon{
-  background-color: white;
+  background-color: white !important;
   font-size: 30px !important;
-  border: 2px solid black;
+  border: 2px solid black !important;
 }

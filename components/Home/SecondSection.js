@@ -15,7 +15,7 @@ function SecondSection() {
         const tl = gsap.timeline({
           scrollTrigger: {
             trigger: '#pinner3', // Replace with your section ID
-            start: 'center center',
+            start: 'top center',
           },
         });
       
