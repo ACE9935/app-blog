@@ -1,7 +1,8 @@
 import { styled } from '@mui/material';
 import { InputBase} from '@mui/material';
 import SearchIcon from '@mui/icons-material/Search';
-import React, { useState } from 'react';
+import React from 'react';
+import { ClickAwayListener } from '@mui/base/ClickAwayListener';
 import { useRouter } from 'next/router';
 import ClearIcon from '@mui/icons-material/Clear';
 import { AnimatePresence,motion } from 'framer-motion';
@@ -46,10 +47,12 @@ function SearchBar({onClick,matches,opens,inputValue,setInputValue}) {
         <Search>
         <SearchIconWrapper 
         className='!cursor-pointer !text-white !px-2' >
-          {inputValue.length?<ClearIcon className='hover:text-red-600 !mr-1' onClick={()=>setInputValue("")}/>:(opens&&!matches)?<ClearIcon className='!hover:text-green-600 !mr-1' onClick={onClick}/>:<></>}
+          {inputValue.length?<ClearIcon className='hover:text-red-600 !mr-1' onClick={()=>setInputValue("")&&onClick()}/>:(opens&&!matches)?<ClearIcon className='hover:text-red-600 !mr-1' onClick={setInputValue("")&&onClick()}/>:<></>}
           <SearchIcon className='hover:text-green-600' onClick={()=>opens?inputValue.length&&router.push(`/search/${inputValue.replace(/ /g, '+')}/1`):matches?inputValue.length&&router.push(`/search/${inputValue.replace(/ /g, '+')}/1`):onClick()}/>
         </SearchIconWrapper>
-        <AnimatePresence>{(matches||opens||inputValue.length)&&<motion.div
+        <AnimatePresence>{(matches||opens||inputValue.length)&&
+        <ClickAwayListener onClickAway={()=>!matches&&opens&&!inputValue.length&&onClick()}>
+        <motion.div
         className='w-[16rem]'
         initial={{width:0}}
         animate={{width:"16rem"}}
@@ -65,6 +68,7 @@ function SearchBar({onClick,matches,opens,inputValue,setInputValue}) {
           inputProps={{ 'aria-label': 'search' }}
         />
          </motion.div>
+         </ClickAwayListener>
         }
         </AnimatePresence>
       </Search>
