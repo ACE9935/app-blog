@@ -2,7 +2,7 @@
 import Head from 'next/head'
 import React from "react";
 import ArticleCard from '../../components/Genres/ArticleCard';
-import search from '../api/Search';
+import search from '../api/searchearch';
 import { Stack,Pagination, PaginationItem } from '@mui/material';
 import Link from 'next/link';
 
