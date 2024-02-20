@@ -1,0 +1,1 @@
+export const genres=["Technology","Stories of Human","Science and Nature"]
