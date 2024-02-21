@@ -3,7 +3,7 @@ import React from 'react';
 
 function Scroller() {
     return ( 
-        <div className='scroller font-primary bg-black text-white overflow-hidden flex flex-nowrap items-center text-4xl sm:text-6xl py-6 gap-[1rem] px-4'>
+        <div className='scroller font-primary bg-black text-white overflow-hidden flex flex-nowrap items-center text-4xl sm:text-6xl py-3 sm:py-6 gap-[1rem] px-4'>
         {
           Array.from({ length: 8 }, (_, index) => index + 1).map((o,i)=><React.Fragment key={i + 1}>
           <StarIcon className='text-white !important' sx={{fontSize:"4rem"}}/>
