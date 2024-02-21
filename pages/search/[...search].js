@@ -56,7 +56,7 @@ function SearchPages({matches,currentPage,totalPage,query,totalResults}) {
               )}
             </div>
             <div className='flex justify-center w-full items-center gap-[30px]'>
-      <Pagination
+      {totalPage>1&&<Pagination
       hidePrevButton
       hideNextButton
       renderItem={(item) => (
@@ -68,7 +68,7 @@ function SearchPages({matches,currentPage,totalPage,query,totalResults}) {
           disabled={item.page==currentPage}
         />
       )}
-      count={totalPage} />
+      count={totalPage} />}
     </div>
            </div>
 

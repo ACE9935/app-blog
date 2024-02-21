@@ -87,7 +87,7 @@ function GenresPage({data,numPages,genre}) {
 
           
           <div className='flex justify-center w-full items-center gap-[30px]'>
-          <Pagination
+          {numPages>1&&<Pagination
           renderItem={(item) => (
             <Link href={`/genre/${data[0].genre.replace(/ /g, '-')}/${item.page}`}>
             <PaginationItem
@@ -95,7 +95,7 @@ function GenresPage({data,numPages,genre}) {
             />
             </Link>
           )}
-          count={numPages} />
+          count={numPages} />}
         </div>
 
            </div>
