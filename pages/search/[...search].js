@@ -57,12 +57,16 @@ function SearchPages({matches,currentPage,totalPage,query,totalResults}) {
             </div>
             <div className='flex justify-center w-full items-center gap-[30px]'>
       <Pagination
+      hidePrevButton
+      hideNextButton
       renderItem={(item) => (
-        <Link href={`/search/${query}/${item.page}`}>
         <PaginationItem
+        component={Link}
+          href={`/search/${query}/${item.page}`}
           {...item}
+          selected={item.page==currentPage}
+          disabled={item.page==currentPage}
         />
-        </Link>
       )}
       count={totalPage} />
     </div>
