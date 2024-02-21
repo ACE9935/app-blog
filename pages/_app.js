@@ -5,6 +5,7 @@ import Loading from './loading'
 import { useRouter } from 'next/router'
 import { useEffect } from 'react'
 import React from 'react'
+import Head from 'next/head'
 
 
 function MyApp({ Component, pageProps }) {
@@ -38,6 +39,9 @@ function MyApp({ Component, pageProps }) {
 
   return (
   <Layout>
+  <Head>
+        <link rel="icon" href="/Star 1.png" type="image/png" />
+    </Head>
   {loading ? (
         <Loading query={router.pathname}/>
       ) : (
