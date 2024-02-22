@@ -72,7 +72,7 @@ function GenresPage({data,numPages,genre}) {
         <section id="SD1" className='w-full relative bg-primary py-12 min-h-screen p-2 flex justify-center'>
          <Head>
         <title>{data[0]?data[0].genre+" Articles":""}</title>
-        <meta name="description" content="I post all type of content on this blog." />
+        <meta name="description" content={genre.content} />
         </Head>
            <div className='p-4 flex flex-col w-full max-w-[1400px]'>
             <div className='flex gap-5 flex-col pb-12 sm:pt-8'>

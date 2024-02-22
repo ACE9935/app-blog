@@ -7,7 +7,7 @@ const NotFoundPage = () => {
     <div className='h-screen flex justify-center relative' id='notfound'>
          <Head>
         <title>404 - InkInspireHub</title>
-        <meta name="description" content="I post all type of content on this blog." />
+        <meta name="description" content="I post all type of content on this blog, Technology, Science and Nature, Stories of Human and more..." />
         </Head>
         <div className='bg-[url("/404img.png")] bg-right bg-no-repeat w-[80%] bg-contain md:w-[500px] aspect-[1] absolute top-0 bottom-0 right-[10px] m-[auto]'></div>
         <div className='flex flex-col gap-10 items-center pt-[6rem] px-4 sm:pt-[10rem] max-w-[900px] relative z-[3]'>

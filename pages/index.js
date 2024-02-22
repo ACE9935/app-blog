@@ -43,7 +43,6 @@ export default function Home({data,genres}) {
     <div>
       <Head>
         <title>InkInspireHub</title>
-        <meta name="description" content="I post all type of content on this blog." />
       </Head>
     <HomeMain/>
     <SecondSection/>

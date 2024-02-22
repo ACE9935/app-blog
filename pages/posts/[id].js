@@ -7,6 +7,16 @@ import React from "react";
 import TitleSection from "../../components/Articles/TitleSection";
 import Article from "../../components/Articles/Article";
 
+function removeParagraphTags(text) {
+  // Remove <p> at the beginning
+  let result = text.replace(/^<p>/, '');
+
+  // Remove </p> at the end
+  result = result.replace(/<\/p>$/, '');
+
+  return result;
+}
+
 export const getStaticProps = async ({params}) => {
    try {
      // Fetch data from the API
@@ -63,7 +73,7 @@ function Articles({data,article}) {
         <section className='w-full relative bg-primary py-12 flex justify-center'>
          <Head>
         <title>{article.title}</title>
-        <meta name="description" content="I post all type of content on this blog." />
+        <meta name="description" content={removeParagraphTags(article.sections[0].content)} />
       </Head>
            <div className="z-[5] relative px-3 sm:px-6 py-4 sm:py-8 text-[1.35rem] leading-[1.625] flex flex-col gap-[2rem] max-w-[1400px]">
             <TitleSection date={article.date} title={article.title} sub={article.genre}/>

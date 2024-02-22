@@ -40,7 +40,9 @@ function MyApp({ Component, pageProps }) {
   return (
   <Layout>
   <Head>
+        <meta charset="UTF-8"/>
         <link rel="icon" href="/Star 1.png" type="image/png" />
+        <meta name="description" content="I post all type of content on this blog, Technology, Science and Nature, Stories of Human and more..." />
     </Head>
   {loading ? (
         <Loading query={router.pathname}/>
