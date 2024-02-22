@@ -20,7 +20,7 @@ function removeParagraphTags(text) {
 export const getStaticProps = async ({params}) => {
    try {
      // Fetch data from the API
-     const article = await fetchById(params.id) ;
+     const article = await fetchById(decodeURIComponent(params.id)) ;
      const response = await getRecommended(article[0].genre)
      console.log('Fetched Blog articles for recommended:', response);
      
@@ -49,7 +49,7 @@ export const getStaticProps = async ({params}) => {
      const paths = slugs.map((slug) =>{ 
       const inputString=slug.title
       return ({
-       params: { id:inputString.replace(/ /g, '-')},
+       params: { id:encodeURIComponent(inputString.replace(/ /g, '-'))},
      })});
  
      return {
