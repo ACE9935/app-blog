@@ -10,10 +10,8 @@ export default async function fetchById(id) {
 
   try {
     // Use the BlogArticle model to find all documents in the "blogArticles" collection
-    const article = await Blog.find({title:id.replace(/-/g, ' ')},{_id:0, createdAt: 0 })
-    .collation({ locale: 'en', strength: 2 })
-    .lean();
-    console.log('Fetched article for path:',article);
+    const article = await Blog.find({title:decodeURIComponent(id.replace(/-/g, ' '))},{_id:0, createdAt: 0 }).lean();
+    console.error(article);
     // Return the fetched articles
     return article
   } catch (error) {

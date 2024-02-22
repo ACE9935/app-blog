@@ -4,7 +4,7 @@ import ATitle from '../../components/Articles/ATitle';
 
 function ArticleCard({data:o}) {
     return ( 
-        <Link className='hover:scale-[1.03]' href={"/posts/"+o.title.replace(/ /g, "-")}><AnimatePresence><motion.div
+        <Link className='hover:scale-[1.03]' href={decodeURIComponent("/posts/"+o.title.replace(/ /g, "-"))}><AnimatePresence><motion.div
               initial={{ opacity: 0,y:-100 }}
               whileInView={{ y: 0,opacity:1 }}
               transition={{ ease: "easeOut", duration: 0.8 }}
