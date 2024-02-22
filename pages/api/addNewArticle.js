@@ -2,7 +2,7 @@ import connectDB from './database';
 import Blog from './blogArticleModel';
 
 const article = {
-  title: "Déjà Vu: Unraveling the Mysteries of Familiar Unfamiliarity",
+  title: "Déjà Vu: Unraveling the Mysteries of Familiar Unfamiliarity ",
   date: "February 22, 2024",
   genre:"Science and Nature",
   sections: [
