@@ -49,7 +49,7 @@ export const getStaticProps = async ({params}) => {
      const paths = slugs.map((slug) =>{ 
       const inputString=slug.title
       return ({
-       params: { id:encodeURIComponent(inputString.replace(/ /g, '-'))},
+       params: { id:inputString.replace(/ /g, '-')},
      })});
  
      return {
