@@ -6,11 +6,7 @@ const uri = process.env.MONGODB_URI;
   export default async function connectDB(){
     try {
       const conn = await mongoose.connect(uri, {
-        useNewUrlParser: true,
-  useUnifiedTopology: true,
-  useCreateIndex: true,
-  useFindAndModify: false,
-  charset: 'utf8',
+
       });
       console.log(`MongoDB Connected: {conn.connection.host}`);
       return conn
