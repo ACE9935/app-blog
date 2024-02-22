@@ -10,7 +10,7 @@ const sectionSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-});
+},{ _id: false });
 
 const blogArticleSchema = new mongoose.Schema({
   title: {

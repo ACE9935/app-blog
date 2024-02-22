@@ -9,7 +9,9 @@ export default async function fetchBlogArticles(genre=false) {
 
   try {
     let articles;
-    if(genre) articles = await Blog.find({recommended:1,genre:genre},{_id:0, createdAt: 0 }).limit(5).lean();
+    if(genre) articles = await Blog.find({recommended:1,genre:genre},{_id:0, createdAt: 0 })
+    .sort({ createdAt: -1 })
+    .limit(5).lean();
     else articles = await Blog.find({recommended:1},{_id:0, createdAt: 0 }).limit(5).lean();
     
     // Log the fetched articles
