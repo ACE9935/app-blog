@@ -12,7 +12,7 @@ export const getStaticProps = async ({params}) => {
      // Fetch data from the API
      const article = await fetchById(params.id) ;
      const response = await getRecommended(article[0].genre)
-     console.log('Fetched Blog Articles:', response);
+     console.log('Fetched Blog articles for recommended:', response);
      
      return {
        props: {
