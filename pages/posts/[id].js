@@ -20,7 +20,6 @@ function removeParagraphTags(text) {
 export const getStaticProps = async ({params}) => {
    try {
      // Fetch data from the API
-     console.log(params.id)
      const article = await fetchById(params.id) ;
      const response = await getRecommended(article[0].genre)
      console.log('Fetched Blog articles for recommended:', response);
@@ -73,8 +72,8 @@ function Articles({data,article}) {
     return ( 
         <section className='w-full relative bg-primary py-12 flex justify-center'>
          <Head>
-        <title>Article</title>
-      
+        <title>{article.title}</title>
+        <meta name="description" content={removeParagraphTags(article.sections[0].content)} />
       </Head>
            <div className="z-[5] relative px-3 sm:px-6 py-4 sm:py-8 text-[1.35rem] leading-[1.625] flex flex-col gap-[2rem] max-w-[1400px]">
             <TitleSection date={article.date} title={article.title} sub={article.genre}/>
