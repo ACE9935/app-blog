@@ -8,7 +8,6 @@ import getGenresArticles from "../api/getGenresArticles";
 import Link from 'next/link';
 import ArticleCard from '../../components/Genres/ArticleCard';
 import { Stack,Pagination, PaginationItem } from '@mui/material';
-import { useRouter } from 'next/router';
 
 const genresCards = parseInt(process.env.NUM_GENRES_CARDS);
 
@@ -89,11 +88,12 @@ function GenresPage({data,numPages,genre}) {
           <div className='flex justify-center w-full items-center gap-[30px]'>
           {numPages>1&&<Pagination
           renderItem={(item) => (
-            <Link href={`/genre/${data[0].genre.replace(/ /g, '-')}/${item.page}`}>
             <PaginationItem
+            component={Link}
               {...item}
+              href={`/genre/${data[0].genre.replace(/ /g, '-')}/${item.page}`}
             />
-            </Link>
+            
           )}
           count={numPages} />}
         </div>
