@@ -64,6 +64,7 @@
     background-position: center;
     background-blend-mode: multiply;
     width: 70%;
+    max-width:26rem;
     aspect-ratio: 1;
     filter: grayscale(100%);
     box-shadow: 14px 14px 0px 5px black;
