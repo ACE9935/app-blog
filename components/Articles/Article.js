@@ -7,6 +7,7 @@ import { styled } from '@mui/material';
 const StyledSection = styled('div')`
    & img{
     margin-bottom:1.3rem;
+    width:100%;
    }
   }`
 
