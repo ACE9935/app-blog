@@ -2,58 +2,58 @@ import connectDB from './database';
 import Blog from './blogArticleModel';
 
 const article = {
-  title: "Déjà Vu: Unraveling the Mysteries of Familiar Unfamiliarity ",
-  date: "February 22, 2024",
-  genre:"Science and Nature",
+  title: "Laniakea: Mapping Our Cosmic Neighborhood",
+  date: "March 10, 2024",
+  genre: "Science and Nature",
   sections: [
     {
       title: "Introduction",
       content: `
-        <p>Déjà vu, the curious phenomenon where one feels an uncanny sense of familiarity with a situation or place, even though it seems entirely new. This mysterious experience has puzzled scientists, philosophers, and the general public for centuries. In this article, we delve into the intricacies of déjà vu, exploring its potential explanations, neurological basis, and the fascinating questions it raises about the nature of consciousness.</p>
+        <p>The Laniakea Supercluster, a vast cosmic structure housing thousands of galaxies, including our own Milky Way, represents one of the largest known formations in the universe. This awe-inspiring region of space challenges our understanding of the cosmos and offers a glimpse into the grand interconnectedness of galaxies. In this article, we explore the discovery, structure, and significance of the Laniakea Supercluster, revealing the profound scale of our cosmic neighborhood.</p>
       `,
     },
     {
-      title: "Déjà Vu Defined",
+      title: "What is the Laniakea Supercluster?",
       content: `
-        <p>Déjà vu, a French term meaning "already seen," describes the sensation of having lived through a particular moment before, even when encountering it for the first time. Individuals often report a strong feeling of recognition, as if they are reliving a fragment of their past in the present moment. This phenomenon can range from fleeting sensations to more prolonged and intense experiences.</p>
+        <p>Laniakea, meaning "immense heaven" in Hawaiian, is a supercluster of galaxies spanning over 500 million light-years. This monumental structure was defined in 2014 through advancements in mapping galactic flows, revealing the gravitational boundaries that group galaxies into this enormous cluster. Laniakea not only includes the Milky Way but also other notable clusters like the Virgo Cluster.</p>
       `,
     },
     {
-      title: "Neurological Underpinnings",
+      title: "The Discovery",
       content: `
-        <p>Researchers have delved into the brain's mechanisms to unravel the mystery of déjà vu. Some theories suggest that déjà vu may arise from a temporary glitch in the brain's memory processes. The brain, in essence, may incorrectly signal that a current experience is a repetition of a past one, creating a profound sense of familiarity. Neuroimaging studies have provided insights into the regions of the brain associated with déjà vu, shedding light on the intricate dance of memory and perception.</p>
+        <p>In 2014, a team of astronomers led by Brent Tully used data on galaxy movements to define the Laniakea Supercluster. By analyzing the flow of galaxies relative to the universe's expansion, they identified a gravitationally bound region that connects thousands of galaxies. This breakthrough provided a clearer picture of how galaxies are distributed and influenced by gravity on a cosmic scale.</p>
       `,
     },
     {
-      title: "Psychological Perspectives",
+      title: "Structure and Boundaries",
       content: `
         <p>
-        <img src="/deja-vu/img1.jpg" alt="clock decaying"/>
-        Psychologists offer alternative explanations for déjà vu, considering factors such as memory recall, attention, and cognitive processing. Some theories propose that déjà vu occurs when there is a mismatch between the speed at which information is processed by the brain's different regions, creating a sense of temporal distortion. Others explore the role of memory retrieval errors, suggesting that similar situations may trigger fragments of forgotten memories, contributing to the eerie familiarity.</p>
+        <img src="/cosmic/img-1.png" alt="Galactic flow map"/>
+        The Laniakea Supercluster is defined by its gravitational pull, which directs the motion of galaxies toward the Great Attractor—a dense region acting as the supercluster's center. The boundaries of Laniakea mark where gravitational influences from neighboring superclusters, such as Perseus-Pisces or Shapley, dominate. Its complex web of filaments and voids highlights the intricate cosmic structure shaped by dark matter and gravity.</p>
       `,
     },
     {
-      title: "Déjà Vu in Culture and History",
+      title: "Significance in Cosmology",
       content: `
-        <p>Déjà vu has left its imprint on art, literature, and cultural narratives throughout history. Writers and artists often use the phenomenon to convey a sense of the surreal or to explore themes of time and identity. Cultural perspectives on déjà vu vary, with some viewing it as a mere quirk of the mind and others attributing it to mystical or supernatural forces.</p>
+        <p>Laniakea has reshaped how astronomers view our position in the universe. It emphasizes the interconnectedness of galaxies, showing that the Milky Way is part of a much larger system than previously thought. Understanding superclusters like Laniakea helps scientists study the universe's large-scale structure, dark matter distribution, and the forces driving cosmic evolution.</p>
       `,
     },
     {
-      title: "The Quantum Enigma",
+      title: "The Role of Dark Matter",
       content: `
-        <p>Intriguingly, some theories on the fringes of science invoke quantum mechanics to explain déjà vu. Concepts such as parallel universes and non-linear time suggest that déjà vu could be glimpses into alternate realities or previous iterations of our own existence. While these ideas remain speculative, they add an extra layer of mystery to the phenomenon.</p>
+        <p>Dark matter plays a crucial role in the formation and stability of superclusters like Laniakea. Invisible and mysterious, it provides the gravitational framework necessary to bind galaxies over vast distances. Studies of Laniakea offer insights into the nature of dark matter, as well as its influence on galactic flows and the evolution of cosmic structures.</p>
       `,
     },
     {
-      title: "Déjà Vu and Memory Disorders",
+      title: "Laniakea in the Broader Universe",
       content: `
-        <p>Déjà vu is not limited to the general population; it has also been studied in individuals with certain memory disorders. Exploring déjà vu in clinical settings provides additional insights into the complex relationship between memory, perception, and the brain's intricate workings.</p>
+        <p>Laniakea is just one of many superclusters in the observable universe. When viewed alongside other structures, such as the Hercules-Corona Borealis Great Wall, it highlights the scale and diversity of cosmic formations. The study of superclusters provides a deeper understanding of the universe's hierarchical nature, from small galactic groups to the immense cosmic web.</p>
       `,
     },
     {
       title: "Conclusion",
       content: `
-        <p>Déjà vu continues to captivate our imaginations and challenge our understanding of consciousness. Whether viewed through the lens of neuroscience, psychology, or speculative physics, the phenomenon remains a tantalizing enigma. As scientists unravel the mysteries of déjà vu, we find ourselves on a journey through the intricate landscapes of memory, perception, and the ever-evolving exploration of the human mind.</p>
+        <p>The Laniakea Supercluster serves as a stunning reminder of the vastness and complexity of the universe. As we uncover its secrets, we gain a greater appreciation for our place in the cosmos. Through the lens of astronomy and astrophysics, Laniakea offers a bridge between the known and the unknown, fueling our quest to understand the universe's grand design.</p>
       `,
     },
   ],
